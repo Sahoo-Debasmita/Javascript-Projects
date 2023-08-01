@@ -1,3 +1,4 @@
+// Array of questions
 const Quiz_question = [{
     'qn': 'What does HTML stand for?',
     'A': 'Hyper Tag Markup Language',
@@ -31,6 +32,7 @@ const Quiz_question = [{
     'correct': 'D'
 }
 ]
+// Variable declaration part
 let index = 0; 
 const length=Quiz_question.length;
 let right=0; let wrong=0;
@@ -38,11 +40,12 @@ const question = document.getElementById("Question");
 const box=document.getElementById('box')
 const options=document.querySelectorAll("label");
 const inputs=document.querySelectorAll("input");
+// Will show the questions and the corresponding options
 const showquestion = () => {
     if(index===length){
        return End_Quiz();
     }
-    reset();
+    reset(); 
     const quiz_info = Quiz_question[index];
     question.innerHTML = `${index + 1}.${quiz_info.qn}`;
     options[0].innerHTML=quiz_info.A;
@@ -50,6 +53,7 @@ const showquestion = () => {
     options[2].innerHTML=quiz_info.C;
     options[3].innerHTML=quiz_info.D;
 }
+// Submit the answer, evaluate it and move forward
 const submit=()=>{
     const quiz_info = Quiz_question[index];
     let answer=getanswer();
@@ -61,6 +65,7 @@ const submit=()=>{
     index++;
     showquestion();
 }
+// return the checked options value
 const getanswer=()=>{
     let ans;
     inputs.forEach((e)=>{
@@ -70,11 +75,13 @@ const getanswer=()=>{
     })
     return ans;
 }
+//Reset the previously selected options
 const reset=()=>{
     inputs.forEach((check)=>{
         check.checked=false;
     })
 }
+//End the test by showing the result and a Thanks note
 const End_Quiz=()=>{
   box.innerHTML=`<div style="text-align:Center"> <h1>Thank you for attending</h1>
     <h2>You scored ${right} out of ${length} </h2> </div>`
