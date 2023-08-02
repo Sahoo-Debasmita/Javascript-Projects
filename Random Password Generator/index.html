@@ -5,13 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Password Generator</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
 </head>
 <body>
    <div class="container">
     <h1>Generate Your Password</h1>
     <div class="password-box">
  <input type="text" id="passbox" readonly>
-    </div>
+ <span class="material-icons" id="copy-icon">content_copy</span>
+</div>
     <input type="range" min="3" max="20" value="6" id="slider">
     <div class="row">
         <p>Password Length</p>
@@ -19,19 +22,19 @@
     </div>
     <div class="row">
         <label for="lowercase">Contains Lowercase</label>
-       <input type="checkbox" class="input" id="lowercase">
+       <input type="checkbox" class="input" checked id="lowercase">
     </div>
     <div class="row">
         <label for="uppercase">Contains Uppercase</label>
-       <input type="checkbox" class="input" id="uppercase">
+       <input type="checkbox" class="input" checked id="uppercase">
     </div>
     <div class="row">
         <label for="Numbers">Contains Numbers</label>
-       <input type="checkbox" class="input" id="Numbers">
+       <input type="checkbox" class="input" checked id="Numbers">
     </div>
     <div class="row">
         <label for="Symbols">Contains Symbols</label>
-       <input type="checkbox" class="input" id="Symbols">
+       <input type="checkbox" class="input" checked id="Symbols">
     </div>
     <button class="btn" id="btn" type="button">Generate  </button>
     </div>

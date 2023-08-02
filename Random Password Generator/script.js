@@ -6,6 +6,7 @@ const uppercase=document.getElementById('uppercase');
 const showbox=document.getElementById('passbox');
 const Numbers=document.getElementById('Numbers');
 const Symbols=document.getElementById('Symbols');
+const copyIcon=document.getElementById('copy-icon');
 let lowerchars="abcdefghijklmnopqrstuvwxyz";
 let upperchars="ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 let numberchars="0123456789";
@@ -36,3 +37,16 @@ const GeneratePassword=()=>{
     }
     return genpassword;
 }
+
+//Copy Icon functionality
+copyIcon.addEventListener('click',()=>{
+    if(showbox.value!=""||showbox.value.length>1){
+        navigator.clipboard.writeText(showbox.value);
+        copyIcon.title="Copied";
+        copyIcon.innerText="check";
+     setInterval(() => {
+        copyIcon.innerText="content_copy";
+        copyIcon.title="";
+     }, 5000);
+    }
+})
