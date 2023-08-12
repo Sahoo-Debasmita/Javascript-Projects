@@ -22,6 +22,7 @@ a{
     padding: 20px 60px;
     display: flex;
     justify-content: space-between;
+    align-items: center;
     margin-bottom: 30px;
 }
 .cartsection{
@@ -48,6 +49,7 @@ a{
     grid-template-columns: repeat(4,223px);
     gap: 30px;
     justify-content: center;
+    margin-bottom: 20px;
 }
 @media(max-width:1000px){
     .shop{
@@ -94,7 +96,7 @@ a{
     text-align: center;
     margin-bottom: 20px;
 }
-.Hbtn{
+.Hbtn,.Checkout,.remove{
     background-color: black;
     color: white;
     border: none;
@@ -103,10 +105,16 @@ a{
     border-radius: 4px;
     cursor: pointer;
 }
+.Checkout{
+    background-color: green;
+}
+.remove{
+    background-color: red;
+}
 /* Shopping-cart Section Design */
 .shopping-cart{
     display: grid;
-    grid-template-columns: repeat(1,320px);
+    grid-template-columns: repeat(1,350px);
     justify-content: center;
     gap: 15px;
 }
@@ -116,8 +124,18 @@ a{
     display: flex;
 }
 .title-price{
-    width: 150px;
+    width: 180px;
     display: flex;
     align-items: center;
     justify-content: space-between;
+}
+.name-price{
+    display: flex;
+    gap: 9px;
+}
+.Cart-price{
+    background-color: black;
+    color: white;
+    border-radius: 4px;
+    padding: 2px 5px;
 }
