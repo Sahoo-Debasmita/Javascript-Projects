@@ -1,0 +1,73 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html,body{
+    font-family: 'Courier New', Courier, monospace;
+}
+.main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100%;
+    background: green;
+}
+.panel{
+    height: 80%;
+    width: 70%;
+    background: white;
+    border-radius: 7px;
+    overflow: hidden;
+}
+.panel-top{
+    display: flex;
+    height: 70px;
+    width: 100%;
+    background: rgb(65, 163, 65);
+    padding: 0 20%;
+    align-items: center;
+    justify-content: space-around;
+}
+.element{
+display: flex;
+align-items: center;
+gap: 10px;
+color: rgb(216, 209, 209);
+}
+.box{
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ color: rgb(12, 58, 12);
+ padding: 5px;
+ background-color: white;
+ border-radius: 5px;
+ font-weight: 600;
+}
+#panel-bottom{
+    width: 100%;
+    height: calc(100% - 70px);
+    padding: 7px;
+    display: flex;
+    gap: 7px;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+.bubble{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    background-color: rgb(23, 149, 23);
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    font-weight: 600;
+}
+.bubble:hover{
+    cursor: pointer;
+    background-color: rgb(53, 70, 53);
+}
